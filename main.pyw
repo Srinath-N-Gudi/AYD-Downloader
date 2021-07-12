@@ -1,3 +1,11 @@
+import subprocess
+import sys
+version = "-"+str(sys.version).split()[0].strip()[:3].strip()
+subprocess.check_output(['py', version, '-m','pip','install', '--upgrade', 'youtube_ff'])
+subprocess.check_output(['py', version, '-m','pip','install', '--upgrade', 'pytube'])
+subprocess.check_output(['py', version, '-m','pip','install', '--upgrade', 'pyqt5'])
+subprocess.check_output(['py', version, '-m','pip','install', '--upgrade', 'numpy'])
+subprocess.check_output(['py', version, '-m','pip','install', '--upgrade', 'pygame'])
 from numpy import save, true_divide
 from utils.util import get_sub_folder_path
 from utils.converter import convert
@@ -11,7 +19,6 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtCore import QTimer
 from DB import DB
 from UI import Ui_Form
-import sys
 import threading
 from YouTube_ff import YouTube_Search
 from YouTube_ff import Downloader
